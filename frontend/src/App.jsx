@@ -16,7 +16,7 @@ import { getUser } from "./utils/getUser";
 import { homeLoader } from "./pages/Home";
 import CourseDetail, { courseDetailLoader } from "./pages/CourseDetail";
 import Payment, { paymentLoader } from "./pages/Payment";
-import Thankyou from "./pages/ThankYou";
+import Thankyou from "./pages/Thankyou";
 import MyCourseVideos, { myCourseVideosLoader } from "./pages/MyCourseVideos";
 
 const router = createBrowserRouter(
