@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Load the publishable key from the server. The publishable key
   // is set in your .env file.
   const publishableKey =
-    "pk_test_51NA7b5SEmnOPh2TgPHyzbCZM0LAJr0DHG9eFlfDUXLQ1l544fwOXRi1inCzKZ7rpX7pqzZcf2iSEHpHXjlLFC6jJ00HQQmrA3x";
+    "pk_test_51T6PH5GkacHtVf4oqe2finBdXqK90dB0HCSW4TYqGFlkBBub23TICVfif4zh3ZdScAvS8ttXcgV6KFOGEA338dc800Ofjq9FuT";
 
   const stripe = Stripe(publishableKey, {
     apiVersion: "2020-08-27",
@@ -73,20 +73,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 const createPaymentIntent = async () => {
   try {
     const response = await fetch(
-      "https://orfqhbdeqtusogzodofb.supabase.co/functions/v1/create-stripe-payment",
+      "https://rfbqprvpxdyfdwhmuqvk.supabase.co/functions/v1/create-stripe-payment",
       {
         method: "POST",
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Im4rRis0cGdZaXIwN2xoNFgiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzEwOTIwNDg3LCJpYXQiOjE3MTA5MTY4ODcsImlzcyI6Imh0dHBzOi8vb3JmcWhiZGVxdHVzb2d6b2RvZmIuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjM3MWU2Njc5LTFiNzAtNDM0YS05Zjc2LTNkYjk2ZWQ4NjJlOSIsImVtYWlsIjoiZHVtbXlAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MTA5MTY4ODd9XSwic2Vzc2lvbl9pZCI6ImQ2Y2U5YWU1LTVhYmEtNGE5NS1iZjkzLTIwNmUyYWQ1NGU5MyIsImlzX2Fub255bW91cyI6ZmFsc2V9.E296rFpngz4FiBmneLsBNujTfUfHeXiZMoHyGmXSkB4",
-          apiKey:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9yZnFoYmRlcXR1c29nem9kb2ZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIyMDM5MzQsImV4cCI6MjAxNzc3OTkzNH0.lPpNrQwmEyVK2hcmH24-w0m78yRQjvqMlj2tK73tThw",
+            "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImQxZTJlOTY0LWFjZDctNDEwOC04YzBiLTkwOGFiMTJlM2Y1ZiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3JmYnFwcnZweGR5ZmR3aG11cXZrLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhNjExODliMC0wYmQ5LTQxNGEtYWEyYy03NmUyYzU2YjEyYTIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzcyMzQ1MjYyLCJpYXQiOjE3NzIzNDE2NjIsImVtYWlsIjoiY291cnNlcmFAbWFpbGluYXRvci5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoiY291cnNlcmFAbWFpbGluYXRvci5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJhNjExODliMC0wYmQ5LTQxNGEtYWEyYy03NmUyYzU2YjEyYTIifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc3MjM0MTY2Mn1dLCJzZXNzaW9uX2lkIjoiMjFhOGNkYjMtMjk4MC00MjllLTk0OGMtNzAzZmE2MGNhMjJlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.UggrUksALjF2-Xhf2ku0UjpHaVfEgWvcQBpomkXlS1dRvi0UOsRyBawt6EPUwCH-Vfpk_xvPU7tmPkIrSwAa4Q",
+          apikey: "sb_publishable_OnpEuyjuZALHa_Cwvg1d5Q_g5jbQvhK",
         },
         // Send any necessary data to your server to create the Payment Intent
         body: JSON.stringify({
-          course_id: 2,
+          course_id: 1,
         }),
-      }
+      },
     );
     const data = await response.json();
     return data.clientSecret;

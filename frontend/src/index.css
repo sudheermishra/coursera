@@ -1,0 +1,120 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #292431;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #fff;
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  margin: auto;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap");
+
+:root {
+  /* Colors */
+  --bg: #0c0f1e;
+  --bg-2: #111526;
+  --surface: #161b2e;
+  --surface-2: #1e2438;
+  --border: #252b42;
+  --border-light: #2e3550;
+
+  --text: #edf0f7;
+  --text-muted: #8896b3;
+  --text-faint: #4a5270;
+
+  --accent: #e8a94d;
+  --accent-dim: rgba(232, 169, 77, 0.12);
+  --accent-glow: rgba(232, 169, 77, 0.25);
+
+  --violet: #a78bfa;
+  --violet-dim: rgba(167, 139, 250, 0.12);
+
+  --teal: #4ecdc4;
+  --teal-dim: rgba(78, 205, 196, 0.1);
+
+  --danger: #f87171;
+
+  /* Typography */
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Radius */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 0 24px rgba(232, 169, 77, 0.15);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Subtle noise texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1300px;
+  width: 92%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}

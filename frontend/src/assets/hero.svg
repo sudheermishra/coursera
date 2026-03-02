@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
+  <!-- Glow background -->
+  <ellipse cx="260" cy="340" rx="200" ry="24" fill="#E8A94D" opacity="0.12"/>
+
+  <!-- Desk -->
+  <rect x="60" y="310" width="400" height="12" rx="6" fill="#2A2F45"/>
+
+  <!-- Laptop base -->
+  <rect x="130" y="290" width="260" height="22" rx="5" fill="#1E2235"/>
+  <rect x="110" y="306" width="300" height="8" rx="4" fill="#252A3F"/>
+
+  <!-- Laptop screen -->
+  <rect x="140" y="130" width="240" height="162" rx="10" fill="#1A1E30"/>
+  <rect x="148" y="138" width="224" height="146" rx="7" fill="#0F1221"/>
+
+  <!-- Screen content - code lines -->
+  <rect x="162" y="155" width="80" height="7" rx="3" fill="#E8A94D" opacity="0.9"/>
+  <rect x="162" y="170" width="130" height="6" rx="3" fill="#4A90D9" opacity="0.7"/>
+  <rect x="175" y="183" width="100" height="6" rx="3" fill="#6BCB77" opacity="0.7"/>
+  <rect x="175" y="196" width="115" height="6" rx="3" fill="#6BCB77" opacity="0.7"/>
+  <rect x="162" y="209" width="90" height="6" rx="3" fill="#4A90D9" opacity="0.7"/>
+  <rect x="162" y="222" width="60" height="6" rx="3" fill="#E8A94D" opacity="0.9"/>
+  <rect x="175" y="235" width="140" height="6" rx="3" fill="#A78BFA" opacity="0.7"/>
+  <rect x="175" y="248" width="110" height="6" rx="3" fill="#A78BFA" opacity="0.7"/>
+  <rect x="162" y="261" width="70" height="6" rx="3" fill="#E8A94D" opacity="0.9"/>
+
+  <!-- Cursor blink -->
+  <rect x="237" y="261" width="8" height="6" rx="1" fill="#E8A94D" opacity="0.9"/>
+
+  <!-- Hinge line -->
+  <rect x="140" y="290" width="240" height="3" rx="1.5" fill="#141828"/>
+
+  <!-- Floating card 1 -->
+  <rect x="355" y="150" width="110" height="70" rx="10" fill="#1E2438" opacity="0.95"/>
+  <rect x="355" y="150" width="110" height="70" rx="10" stroke="#E8A94D" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="374" cy="172" r="10" fill="#E8A94D" opacity="0.15"/>
+  <text x="374" y="176" text-anchor="middle" font-size="11" fill="#E8A94D">✓</text>
+  <rect x="390" y="166" width="60" height="6" rx="3" fill="#E8A94D" opacity="0.6"/>
+  <rect x="368" y="186" width="84" height="5" rx="2.5" fill="#8896B3" opacity="0.5"/>
+  <rect x="368" y="197" width="65" height="5" rx="2.5" fill="#8896B3" opacity="0.4"/>
+
+  <!-- Floating card 2 -->
+  <rect x="50" y="170" width="95" height="60" rx="10" fill="#1E2438" opacity="0.95"/>
+  <rect x="50" y="170" width="95" height="60" rx="10" stroke="#A78BFA" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="68" cy="190" r="9" fill="#A78BFA" opacity="0.15"/>
+  <text x="68" y="194" text-anchor="middle" font-size="10" fill="#A78BFA">⚛</text>
+  <rect x="82" y="185" width="48" height="6" rx="3" fill="#A78BFA" opacity="0.6"/>
+  <rect x="62" y="204" width="68" height="5" rx="2.5" fill="#8896B3" opacity="0.5"/>
+  <rect x="62" y="215" width="52" height="5" rx="2.5" fill="#8896B3" opacity="0.4"/>
+
+  <!-- Floating dots decoration -->
+  <circle cx="430" cy="240" r="3" fill="#E8A94D" opacity="0.4"/>
+  <circle cx="445" cy="255" r="2" fill="#E8A94D" opacity="0.25"/>
+  <circle cx="420" cy="260" r="2" fill="#E8A94D" opacity="0.2"/>
+
+  <circle cx="90" cy="260" r="3" fill="#A78BFA" opacity="0.4"/>
+  <circle cx="75" cy="275" r="2" fill="#A78BFA" opacity="0.25"/>
+  <circle cx="105" cy="278" r="2" fill="#A78BFA" opacity="0.2"/>
+</svg>

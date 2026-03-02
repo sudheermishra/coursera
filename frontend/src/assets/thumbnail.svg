@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" fill="none">
+  <!-- Background -->
+  <rect width="280" height="180" rx="12" fill="#131725"/>
+
+  <!-- Subtle grid -->
+  <line x1="0" y1="60" x2="280" y2="60" stroke="#1E2438" stroke-width="1"/>
+  <line x1="0" y1="120" x2="280" y2="120" stroke="#1E2438" stroke-width="1"/>
+  <line x1="93" y1="0" x2="93" y2="180" stroke="#1E2438" stroke-width="1"/>
+  <line x1="187" y1="0" x2="187" y2="180" stroke="#1E2438" stroke-width="1"/>
+
+  <!-- Play button circle -->
+  <circle cx="140" cy="90" r="36" fill="#E8A94D" opacity="0.12"/>
+  <circle cx="140" cy="90" r="26" fill="#E8A94D" opacity="0.18"/>
+  <circle cx="140" cy="90" r="18" fill="#E8A94D"/>
+
+  <!-- Play triangle -->
+  <polygon points="136,83 136,97 149,90" fill="#131725"/>
+
+  <!-- Bottom label bar -->
+  <rect x="0" y="148" width="280" height="32" rx="0" fill="#1A1F35"/>
+  <rect x="0" y="148" width="280" height="32" rx="12" fill="#1A1F35"/>
+  <rect x="0" y="148" width="280" height="16" fill="#1A1F35"/>
+
+  <rect x="16" y="158" width="80" height="7" rx="3" fill="#8896B3" opacity="0.6"/>
+  <rect x="196" y="156" width="68" height="10" rx="5" fill="#E8A94D" opacity="0.15"/>
+  <rect x="202" y="159" width="56" height="5" rx="2.5" fill="#E8A94D" opacity="0.7"/>
+</svg>
